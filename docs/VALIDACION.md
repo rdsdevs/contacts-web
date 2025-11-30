@@ -123,3 +123,59 @@ Ejemplo de salida:
 2. Los atributos se traducen automáticamente según la configuración en `attributes`
 3. Todos los placeholders `:attribute`, `:min`, `:max`, `:value` se reemplazan automáticamente
 4. Los estilos CSS de error (rojo, icono) se aplican automáticamente en las vistas mejoradas
+
+## Ubicación del Archivo
+
+El archivo de validaciones está en:
+
+```
+resources/lang/es/validation.php
+```
+
+Para modificar mensajes:
+
+1. Abre el archivo
+2. Busca la regla en la sección correspondiente
+3. Modifica el mensaje
+4. El cambio será automático en todos los formularios
+
+## Validaciones Personalizadas
+
+Las validaciones se aplican en los controladores:
+
+**AuthController.php**:
+
+```php
+$request->validate([
+    'nombre' => 'required|string|max:255',
+    'apellido' => 'required|string|max:255',
+    'email' => 'required|email|unique:users',
+    'password' => 'required|string|min:6|confirmed',
+]);
+```
+
+**ContactController.php**:
+
+```php
+$request->validate([
+    'nombre' => 'required|string|max:255',
+    'apellido' => 'required|string|max:255',
+    'email' => 'required|email',
+    'telefono' => 'required|string',
+    'direccion' => 'nullable|string',
+]);
+```
+
+---
+
+## 📖 Documentación Relacionada
+
+-   **[README.md](../README.md)** - Características
+-   **[USO.md](./USO.md)** - Manual de usuario
+-   **[DESARROLLO.md](./DESARROLLO.md)** - Detalles técnicos
+
+---
+
+**Versión:** 1.0.0  
+**Última actualización:** Noviembre 2025  
+**Estado:** ✅ Completa
