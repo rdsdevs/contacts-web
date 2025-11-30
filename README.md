@@ -257,6 +257,8 @@ MIT License - Libre para uso comercial y personal
 
 **ContactsWeb** - Desarrollado como aplicación web moderna para APIs REST con Laravel 10 y Guzzle.
 
+**Desarrollador**: !NG. LUIS T😎NCEL
+
 **Versión**: 1.0.0  
 **Estado**: ✅ Producción  
 **Última actualización**: Noviembre 2025
